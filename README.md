@@ -19,7 +19,7 @@ Before you begin, ensure you have met the following requirements:
 1. **Clone the repository:**
 
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/MarcelaBustamante/karateproj.git
    ```
 ### Navigate to the project directory
 
@@ -46,7 +46,8 @@ Test reports are generated in the target/surefire-reports directory. You can vie
 
 ### Project Structure
 src/test/java: Java test scripts and runners.
-src/test/resources: Contains feature files written in Gherkin syntax.
+src/test/runaApp/features: Contains feature files written in Gherkin syntax.
+src/test/runaApp/performance: Contains performance files written in Gherkin syntax.
 pom.xml: Contains all the project configurations and dependencies.
 
 # Using Docker
@@ -71,7 +72,13 @@ docker build -t karate-project .
 Execute the following command to run the tests inside a Docker container:
 
 ``` bash
-docker run --rm karate-project
+docker-compose up --build
+```
+
+end docker compose
+
+``` bash
+docker-compose down
 ```
 
 ## Check the results:
